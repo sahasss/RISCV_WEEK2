@@ -1,40 +1,32 @@
-## VSDBabySoc functional flow - RTL to Gate Level Synthesis Flow
+# VSDBabySoC – RTL to Gate-Level Synthesis Flow
 
-This repository walksthrough the full flow, from high-level RTL modeling to gate-level validation.
+## 📘 Overview
+The **VSDBabySoC** project demonstrates a complete **digital design flow**, starting from RTL modeling, through synthesis, and ending with **gate-level simulation (GLS)**.  
 
-## 🔎 What’s Inside?
+BabySoC integrates three essential building blocks:
+- 🖥 **rvmyth** → lightweight RISC-V CPU core  
+- 🎚 **avsddac** → Digital-to-Analog Converter (DAC)  
+- ⏱ **avsdpll** → Phase-Locked Loop (PLL)  
 
-The BabySoC ties together three essential blocks:
+Together, these components form a minimal SoC that can be **simulated, synthesized, and validated** down to the gate level using an open-source toolchain.  
 
-- 🖥 rvmyth → a lightweight RISC-V CPU core
+---
 
-- 🎚 avsddac → Digital-to-Analog Converter (DAC)
+## 🎯 Project Goals
+- Develop intuition in **SoC architecture and flow**  
+- Practice **RTL modeling and verification** with BabySoC  
+- Perform **logic synthesis** using SkyWater 130nm PDK  
+- Verify **functional equivalence** between RTL and GLS  
 
-- ⏱ avsdpll → Phase-Locked Loop (PLL)
-
-These components form a minimal SoC that can be simulated, synthesized, and verified all the way down to the gate level.
-
-## 🎯 Goals of the Project
-
-- Build intuition in SoC architecture and flow
-
-- Practice RTL modeling and verification with BabySoC
-
-- Translate RTL into a SkyWater 130nm gate-level netlist
-
-- Prove functional equivalence between RTL and GLS
+---
 
 ## 🛠 Toolchain Overview
+This flow uses a **fully open-source stack**:
+- **Sandpiper** → Translates TL-Verilog to Verilog for rvmyth  
+- **Icarus Verilog** → RTL & GLS simulation  
+- **Yosys** → Logic synthesis with Sky130 library  
+- **GTKWave** → Waveform visualization  
 
-- We rely on a fully open-source stack:
-
-- Sandpiper → Translates TL-Verilog into Verilog for rvmyth
-
-- Icarus Verilog → RTL & GLS simulation
-
-- Yosys → Logic synthesis with Sky130 library
-
-- GTKWave → Waveform inspection
 
 👉 To generate the CPU core Verilog:
 ```bash
