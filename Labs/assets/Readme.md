@@ -52,7 +52,7 @@ gtkwave pre_synth_sim.vcd
 ```
 
 ✅ Confirms DAC writes and PLL locking at RTL level.
-![Presynthesis_simulation](assets/pre_synth.png)
+![Presynthesis_simulation](pre_synth.png)
 
 ## 2️⃣ Synthesis with Yosys
 
@@ -94,10 +94,10 @@ show vsdbabysoc
 ```
 
 ✅ Produces gate-level netlist and synthesis statistics.
-![Chip_statistics](assets/chip_stats.png)
+![Chip_statistics](chip_stats.png)
 
 ✔ Produces gate-level netlist
-![Yosys_simulation](assets/VSDBabySoC.png)
+![Yosys_simulation](VSDBabySoC.png)
 
 ## 3️⃣ Gate-Level Simulation (GLS)
 
@@ -116,7 +116,7 @@ gtkwave dump.vcd
 ```
 
 ✅ GLS waveforms line up with RTL — functional equivalence achieved!
-![Yosys_simulation](assets/post_synth_sim.png)
+![Yosys_simulation](post_synth_sim.png)
 
 ## 📊 Key Outcomes
 
